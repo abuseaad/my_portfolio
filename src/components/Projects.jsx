@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaGithub, FaArrowUpRightFromSquare } from "react-icons/fa6";
 import Section from "./Section.jsx";
 import { projects } from "../data/projects.js";
+import TechIcon from "./TechIcon.jsx";
 
 function Cover({ project }) {
   const [failed, setFailed] = useState(false);
@@ -18,11 +19,11 @@ function Card({ project }) {
   return (
     <article className={`card project ${project.featured ? "featured" : ""}`}>
       <Cover project={project} />
-      <div className="project-body">
+      <div className="tech-panel" aria-label={`Technologies used in ${project.name}`}>
+        {project.tech.map((t) => <TechIcon key={t} name={t} />)}
+      </div>
+      <div className="project-foot">
         <h3>{project.name}{project.status && <em className="badge">{project.status}</em>}</h3>
-        <p>{project.description}</p>
-        <ul className="feature-list">{project.features.map((f) => <li key={f}>{f}</li>)}</ul>
-        <ul className="chips small">{project.tech.map((t) => <li key={t}>{t}</li>)}</ul>
         <div className="project-links">
           <a className="btn btn-outline sm" href={project.github} target="_blank" rel="noreferrer"><FaGithub /> GitHub</a>
           {hasDemo ? (

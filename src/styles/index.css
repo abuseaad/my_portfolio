@@ -96,9 +96,9 @@ h1, h2, h3 { font-family: var(--head); line-height: 1.2; margin: 0; }
 /* ---------- projects ---------- */
 .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 .project { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
-.project.featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1.1fr; }
+
 .cover { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #0d1626; }
-.project.featured .cover { height: 100%; aspect-ratio: auto; min-height: 240px; }
+
 .cover.placeholder { display: grid; place-content: center; text-align: center; gap: 4px; color: #5fd3c4; background: repeating-linear-gradient(135deg, #0d1626 0 14px, #101c31 14px 28px); }
 .cover.placeholder span { font: 700 2.4rem var(--head); }
 .cover.placeholder small { color: #8a9bb5; font-size: .72rem; padding: 0 12px; word-break: break-all; }
@@ -157,8 +157,6 @@ h1, h2, h3 { font-family: var(--head); line-height: 1.2; margin: 0; }
   .pipeline li:not(:last-child)::after { right: auto; left: 50%; top: auto; bottom: -11px; width: 2px; height: 10px; }
 }
 @media (max-width: 720px) {
-  .project-grid, .project.featured { grid-template-columns: 1fr; }
-  .project.featured .cover { aspect-ratio: 16 / 9; height: auto; min-height: 0; }
   .section { padding-top: 56px; }
   .cta .btn { flex: 1 1 100%; }
 }
@@ -166,3 +164,26 @@ h1, h2, h3 { font-family: var(--head); line-height: 1.2; margin: 0; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+.popup-backdrop { position: fixed; inset: 0; background: rgba(0, 0, 0, .55); display: grid; place-items: center; padding: 20px; z-index: 100; }
+.popup { background: var(--surface); color: var(--ink); border-radius: 14px; padding: 28px 26px; max-width: 380px; width: 100%; text-align: center; display: grid; gap: 10px; justify-items: center; animation: rise .25s ease both; }
+.popup svg { font-size: 2.6rem; }
+.popup.sent svg { color: #16a34a; }
+.popup.error svg { color: #dc2626; }
+.popup h3 { margin: 0; font-size: 1.2rem; }
+.popup p { margin: 0 0 8px; color: var(--muted); }
+.project-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.project .cover { aspect-ratio: 16 / 10; }
+.tech-panel { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 18px 26px; padding: 22px 16px; min-height: 120px; background: #0d1626; }
+.tech-icon { font-size: 2.6rem; display: grid; transition: transform .2s; }
+.tech-icon:hover { transform: scale(1.12); }
+.project-foot { padding: 14px 16px 16px; display: grid; gap: 12px; }
+.project-foot h3 { margin: 0; font-size: 1.05rem; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* ---------- icon-only skills ---------- */
+.icon-row { display: flex; flex-wrap: wrap; gap: 14px; }
+.skill-group .tech-icon { font-size: 1.9rem; width: 56px; height: 56px; place-items: center; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; }
+.skill-group .tech-icon:hover, .skill-group .tech-icon:focus-visible { border-color: var(--accent); }
+.tech-icon { position: relative; cursor: default; }
+/* name tooltip: shows on hover, keyboard focus and tap */
+.tech-icon::after { content: attr(data-label); position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #0b1220; color: #fff; font: 500 .75rem var(--font); padding: 4px 9px; border-radius: 6px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .15s; z-index: 5; }
+.tech-icon:hover::after, .tech-icon:focus::after, .tech-icon:focus-visible::after { opacity: 1; }

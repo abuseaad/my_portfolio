@@ -9,14 +9,12 @@ export const profile = {
   subtitle: "5th-Year Medical Student",
   photo,
   email: "sadikarsi19@gmail.com",
-  phone: "+251919428142",
   telegram: "sjarsi19",
   location: "Asella, Oromia, Ethiopia",
   github: "https://github.com/abuseaad",
-  // TODO: replace with your real profile URL, e.g. https://www.linkedin.com/in/your-name
-  linkedin: "https://www.linkedin.com/search/results/people/?keywords=sadik%20jemal",
+ linkedin: "https://www.linkedin.com/in/sadik-jemal-aa82773b5",
   // Put your PDF at public/cv/Sadik-Jemal-CV.pdf (same file name) to replace the placeholder.
-  cv: "cv/Sadik-Jemal-CV.pdf",
+  cv: "cv/Sadik-Jemal-CV.pdf/",
 };
 
 export const heroText =
