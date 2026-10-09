@@ -1,0 +1,45 @@
+import { useState } from "react";
+import { FaGithub, FaArrowUpRightFromSquare } from "react-icons/fa6";
+import Section from "./Section.jsx";
+import { projects } from "../data/projects.js";
+
+function Cover({ project }) {
+  const [failed, setFailed] = useState(false);
+  const src = `${import.meta.env.BASE_URL}projects/${project.image}`;
+  if (failed || !project.image) {
+    const initials = project.name.split(" ").slice(0, 2).map((w) => w[0]).join("");
+    return <div className="cover placeholder" role="img" aria-label={`${project.name} cover placeholder`}><span>{initials}</span><small>Add image: public/projects/{project.image}</small></div>;
+  }
+  return <img className="cover" src={src} alt={`${project.name} screenshot`} loading="lazy" onError={() => setFailed(true)} />;
+}
+
+function Card({ project }) {
+  const hasDemo = Boolean(project.demo);
+  return (
+    <article className={`card project ${project.featured ? "featured" : ""}`}>
+      <Cover project={project} />
+      <div className="project-body">
+        <h3>{project.name}{project.status && <em className="badge">{project.status}</em>}</h3>
+        <p>{project.description}</p>
+        <ul className="feature-list">{project.features.map((f) => <li key={f}>{f}</li>)}</ul>
+        <ul className="chips small">{project.tech.map((t) => <li key={t}>{t}</li>)}</ul>
+        <div className="project-links">
+          <a className="btn btn-outline sm" href={project.github} target="_blank" rel="noreferrer"><FaGithub /> GitHub</a>
+          {hasDemo ? (
+            <a className="btn btn-primary sm" href={project.demo} target="_blank" rel="noreferrer"><FaArrowUpRightFromSquare /> Live demo</a>
+          ) : (
+            <button className="btn btn-primary sm" disabled title="Live demo link coming soon"><FaArrowUpRightFromSquare /> Live demo</button>
+          )}
+        </div>
+      </div>
+    </article>
+  );
+}
+
+export default function Projects() {
+  return (
+    <Section id="projects" title="Projects" lead="Full-stack and AI work first, then the frontend projects I built to practice.">
+      <div className="project-grid">{projects.map((p) => <Card key={p.name} project={p} />)}</div>
+    </Section>
+  );
+}
