@@ -39,7 +39,7 @@ features: ["Semantic search with Gemini embeddings", "Course-document RAG", "Exp
     description: "A fully responsive clone of the Apple website, built to practice layout and media queries.",
     tech: ["html", "css", "bootstrap"],
     features: ["Responsive across devices", "Product sections"],
-    github: "https://github.com/abuseaad/<repo>", demo: "", image: "apple-clone.png",
+    demo: "https://apple-website-responsive.vercel.app/", image: "apple-clone.png",
   },
   {
     name: "Movie App",
