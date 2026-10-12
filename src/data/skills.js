@@ -1,9 +1,29 @@
 // Each skill is an icon key from src/components/TechIcon.jsx
 export const skillGroups = [
-  { title: "Frontend", items: ["html", "css", "responsive", "media", "bootstrap", "js", "dom", "jquery", "react", "vite"] },
-  { title: "Backend", items: ["node", "express", "api", "integration", "backend", "auth"] },
+  {
+    title: "Frontend",
+    items: [
+      "html",
+      "css",
+      "responsive",
+      "media",
+      "bootstrap",
+      "js",
+      "dom",
+      "jquery",
+      "react",
+      "vite",
+    ],
+  },
+  {
+    title: "Backend",
+    items: ["node", "express", "api", "integration", "backend", "auth"],
+  },
   { title: "Database", items: ["mysql", "sql", "dbdesign", "crud"] },
-  { title: "AI & Integration", items: ["gemini", "ai", "integration", "search", "rag"] },
+  {
+    title: "AI & Integration",
+    items: ["gemini", "ai", "integration", "search", "rag"],
+  },
   { title: "Tools", items: ["git", "github", "vscode", "branching", "team"] },
 ];
 

@@ -13,7 +13,11 @@ export default function Experience() {
             </div>
             <p className="org">{e.org}</p>
             {e.note && <p className="note">{e.note}</p>}
-            <ul>{e.points.map((p) => <li key={p}>{p}</li>)}</ul>
+            <ul>
+              {e.points.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
+            </ul>
           </li>
         ))}
       </ol>

@@ -10,36 +10,29 @@ export const projects = [
   {
     name: "AI-Powered Evangadi Forum",
     featured: true,
-    status: "In development",
+    // status: "In development",
    description:
   "A Q&A forum for course cohorts with AI-assisted search. Questions are found by meaning, and a RAG feature answers from course documents.",
 features: ["Semantic search with Gemini embeddings", "Course-document RAG", "Express + MySQL backend", "Responsive landing page"],
     tech: ["react", "node", "express", "mysql", "gemini", "rag","api"],
     features: ["Semantic search with Gemini embeddings", "Course-document RAG (planned)", "Express + MySQL backend", "Responsive landing page"],
-    github: "https://github.com/abuseaad/<repo>",
+
     demo: "",
     image: "forum.png",
+  },
+   {
+    name: "ChatGPT Clone",
+    description: "A chat-style interface modeled on ChatGPT, with a sidebar and message input.",
+   tech: ["react", "node", "express", "mysql", "gemini", "api"],
+    features: ["Chat layout with sidebar", "Message input"],
+   demo: "https://sadiksgptclone.netlify.app/", image: "chatgpt-clone.png",
   },
   {
     name: "Netflix Clone",
     description: "A Netflix-style streaming interface with rows of titles and a familiar browsing layout.",
     tech: ["react"],
     features: ["Component-based UI", "Responsive layout"],
-    github: "https://github.com/abuseaad/<repo>", demo: "", image: "netflix.png",
-  },
-  {
-    name: "Movie App",
-    description: "A movie browser with a poster grid, search and a favorites page.",
-    tech: ["react", "api"],
-    features: ["Search for movies", "Favorites page", "Poster grid"],
-    github: "https://github.com/abuseaad/<repo>", demo: "", image: "movie-app.png",
-  },
-  {
-    name: "ChatGPT Clone",
-    description: "A chat-style interface modeled on ChatGPT, with a sidebar and message input.",
-   tech: ["react", "node", "express", "mysql", "gemini", "api"],
-    features: ["Chat layout with sidebar", "Message input"],
-    github: "https://github.com/abuseaad/<repo>", demo: "", image: "chatgpt-clone.png",
+    demo: "", image: "netflix.png",
   },
   {
     name: "Apple Website Clone",
@@ -48,6 +41,15 @@ features: ["Semantic search with Gemini embeddings", "Course-document RAG", "Exp
     features: ["Responsive across devices", "Product sections"],
     github: "https://github.com/abuseaad/<repo>", demo: "", image: "apple-clone.png",
   },
+  {
+    name: "Movie App",
+    description: "A movie browser with a poster grid, search and a favorites page.",
+    tech: ["react", "api"],
+    features: ["Search for movies", "Favorites page", "Poster grid"],
+    demo: "", image: "movie-app.png",
+  },
+ 
+  
   {
     name: "Medical Libraries",
     description: "A study hub that organizes clinical-year files by department: Pediatrics, OBS/GYNE, Surgery and Internal Medicine.",

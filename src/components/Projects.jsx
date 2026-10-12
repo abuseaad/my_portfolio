@@ -8,10 +8,31 @@ function Cover({ project }) {
   const [failed, setFailed] = useState(false);
   const src = `${import.meta.env.BASE_URL}projects/${project.image}`;
   if (failed || !project.image) {
-    const initials = project.name.split(" ").slice(0, 2).map((w) => w[0]).join("");
-    return <div className="cover placeholder" role="img" aria-label={`${project.name} cover placeholder`}><span>{initials}</span><small>Add image: public/projects/{project.image}</small></div>;
+    const initials = project.name
+      .split(" ")
+      .slice(0, 2)
+      .map((w) => w[0])
+      .join("");
+    return (
+      <div
+        className="cover placeholder"
+        role="img"
+        aria-label={`${project.name} cover placeholder`}
+      >
+        <span>{initials}</span>
+        <small>Add image: public/projects/{project.image}</small>
+      </div>
+    );
   }
-  return <img className="cover" src={src} alt={`${project.name} screenshot`} loading="lazy" onError={() => setFailed(true)} />;
+  return (
+    <img
+      className="cover"
+      src={src}
+      alt={`${project.name} screenshot`}
+      loading="lazy"
+      onError={() => setFailed(true)}
+    />
+  );
 }
 
 function Card({ project }) {
@@ -19,17 +40,37 @@ function Card({ project }) {
   return (
     <article className={`card project ${project.featured ? "featured" : ""}`}>
       <Cover project={project} />
-      <div className="tech-panel" aria-label={`Technologies used in ${project.name}`}>
-        {project.tech.map((t) => <TechIcon key={t} name={t} />)}
+      <div
+        className="tech-panel"
+        aria-label={`Technologies used in ${project.name}`}
+      >
+        {project.tech.map((t) => (
+          <TechIcon key={t} name={t} />
+        ))}
       </div>
       <div className="project-foot">
-        <h3>{project.name}{project.status && <em className="badge">{project.status}</em>}</h3>
+        <h3>
+          {project.name}
+          {project.status && <em className="badge">{project.status}</em>}
+        </h3>
         <div className="project-links">
-          <a className="btn btn-outline sm" href={project.github} target="_blank" rel="noreferrer"><FaGithub /> GitHub</a>
           {hasDemo ? (
-            <a className="btn btn-primary sm" href={project.demo} target="_blank" rel="noreferrer"><FaArrowUpRightFromSquare /> Live demo</a>
+            <a
+              className="btn btn-primary sm"
+              href={project.demo}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaArrowUpRightFromSquare /> Live demo
+            </a>
           ) : (
-            <button className="btn btn-primary sm" disabled title="Live demo link coming soon"><FaArrowUpRightFromSquare /> Live demo</button>
+            <button
+              className="btn btn-primary sm"
+              disabled
+              title="Live demo link coming soon"
+            >
+              <FaArrowUpRightFromSquare /> Live demo
+            </button>
           )}
         </div>
       </div>
@@ -39,8 +80,16 @@ function Card({ project }) {
 
 export default function Projects() {
   return (
-    <Section id="projects" title="Projects" lead="Full-stack and AI work first, then the frontend projects I built to practice.">
-      <div className="project-grid">{projects.map((p) => <Card key={p.name} project={p} />)}</div>
+    <Section
+      id="projects"
+      title="Projects"
+      lead="From frontend development to full-stack projects and AI-powered applications."
+    >
+      <div className="project-grid">
+        {projects.map((p) => (
+          <Card key={p.name} project={p} />
+        ))}
+      </div>
     </Section>
   );
 }

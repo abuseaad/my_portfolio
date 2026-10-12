@@ -12,9 +12,9 @@ export const profile = {
   telegram: "sjarsi19",
   location: "Asella, Oromia, Ethiopia",
   github: "https://github.com/abuseaad",
- linkedin: "https://www.linkedin.com/in/sadik-jemal-aa82773b5",
+  linkedin: "https://www.linkedin.com/in/sadik-jemal-aa82773b5",
   // Put your PDF at public/cv/Sadik-Jemal-CV.pdf (same file name) to replace the placeholder.
-  cv: "cv/Sadik-Jemal-CV.pdf/",
+  // cv: "cv/Sadik-Jemal-CV.pdf/",
 };
 
 export const heroText =
@@ -27,13 +27,33 @@ export const about = {
     "My goal is to build useful AI-powered applications as part of a development team, starting with an internship or junior role.",
   ],
   highlights: [
-    { title: "Full-stack training", text: "Evangadi: AI Powered Full-stack Application Development." },
-    { title: "AI integration", text: "Connecting AI APIs to web applications, including semantic search and RAG." },
-    { title: "Medicine, year 5", text: "Clinical training at Arsi University." },
-    { title: "Team workflow", text: "Git and GitHub: branches, pull requests, collaboration." },
+    {
+      title: "Full-stack training",
+      text: "Evangadi: AI Powered Full-stack Application Development.",
+    },
+    {
+      title: "AI integration",
+      text: "Connecting AI APIs to web applications, including semantic search and RAG.",
+    },
+    {
+      title: "Medicine, year 5",
+      text: "Clinical training at Arsi University.",
+    },
+    {
+      title: "Team workflow",
+      text: "Git and GitHub: branches, pull requests, collaboration.",
+    },
   ],
   softSkills: [
-    "Problem solving", "Critical thinking", "Teamwork", "Group discussions", "Communication",
-    "Collaboration", "Leadership", "Time management", "Adaptability", "Learning new technologies",
+    "Problem solving",
+    "Critical thinking",
+    "Teamwork",
+    "Group discussions",
+    "Communication",
+    "Collaboration",
+    "Leadership",
+    "Time management",
+    "Adaptability",
+    "Learning new technologies",
   ],
 };

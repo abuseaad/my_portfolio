@@ -9,7 +9,9 @@ export default function Education() {
           <article className="card" key={e.school}>
             <h3>{e.school}</h3>
             <p className="edu-program">{e.program}</p>
-            <p className="muted">{e.level} · {e.period}</p>
+            <p className="muted">
+              {e.level} · {e.period}
+            </p>
           </article>
         ))}
       </div>

@@ -38,15 +38,43 @@ export const experience = [
 ];
 
 export const education = [
-  { school: "Evangadi", program: "AI Powered Full-stack Application Development", level: "Training program", period: "2026" },
-  { school: "Arsi University", program: "Medicine (MD program)", level: "5th-Year Medical Student", period: "2021 to present" },
+  {
+    school: "Evangadi",
+    program: "AI Powered Full-stack Application Development",
+    level: "Training program",
+    period: "2026",
+  },
+  {
+    school: "Arsi University",
+    program: "Medicine (MD program)",
+    level: "5th-Year Medical Student",
+    period: "2021 to present",
+  },
 ];
 
 export const medicalThemes = [
-  { title: "Clinical reasoning", text: "Gather facts, list possibilities, test them. I debug the same way." },
-  { title: "Patient-centered thinking", text: "I start from what the person needs, which keeps interfaces simple and useful." },
-  { title: "Evidence-based habits", text: "I check sources and results before trusting a conclusion." },
-  { title: "Communication", text: "Clear explanations to patients, teammates and non-technical users." },
-  { title: "Teamwork under pressure", text: "Hospital teams taught me to coordinate and stay calm with deadlines." },
-  { title: "Healthcare workflows", text: "I understand how clinical information moves, which helps me design health-related tools." },
+  {
+    title: "Clinical reasoning",
+    text: "Gather facts, list possibilities, test them. I debug the same way.",
+  },
+  {
+    title: "Patient-centered thinking",
+    text: "I start from what the person needs, which keeps interfaces simple and useful.",
+  },
+  {
+    title: "Evidence-based habits",
+    text: "I check sources and results before trusting a conclusion.",
+  },
+  {
+    title: "Communication",
+    text: "Clear explanations to patients, teammates and non-technical users.",
+  },
+  {
+    title: "Teamwork under pressure",
+    text: "Hospital teams taught me to coordinate and stay calm with deadlines.",
+  },
+  {
+    title: "Healthcare workflows",
+    text: "I understand how clinical information moves, which helps me design health-related tools.",
+  },
 ];

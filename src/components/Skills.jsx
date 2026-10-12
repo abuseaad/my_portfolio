@@ -4,13 +4,19 @@ import { skillGroups } from "../data/skills.js";
 
 export default function Skills() {
   return (
-    <Section id="skills" title="Skills" lead="Technologies I have learned and used in my projects. Hover over an icon to see its name.">
+    <Section
+      id="skills"
+      title="Skills"
+      lead="Technologies I have learned and used in my projects."
+    >
       <div className="skill-grid">
         {skillGroups.map((g) => (
           <div className="skill-group" key={g.title}>
             <h3>{g.title}</h3>
             <div className="icon-row">
-              {g.items.map((key) => <TechIcon key={key} name={key} />)}
+              {g.items.map((key) => (
+                <TechIcon key={key} name={key} />
+              ))}
             </div>
           </div>
         ))}
