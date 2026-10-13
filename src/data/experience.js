@@ -4,7 +4,7 @@ export const experience = [
     kind: "dev",
     role: "Full-Stack Application Development Training",
     org: "Evangadi",
-    period: "[2026]",
+    period: "2026",
     points: [
       "Completed AI Powered Full-stack Application Development training.",
       "Built applications with React, Node.js, Express and MySQL, connected through REST APIs.",
@@ -15,7 +15,7 @@ export const experience = [
     kind: "dev",
     role: "Independent Web Projects",
     org: "Personal projects",
-    period: "[2025] to present",
+    period: "2025 to present",
     points: [
       "Building the AI-Powered Evangadi Forum: Express and MySQL backend with Gemini-based semantic search.",
       "Built UI clones and small apps (Netflix, ChatGPT, Apple, Movie App, Snake) to practice React and responsive design.",
@@ -25,7 +25,7 @@ export const experience = [
     kind: "med",
     role: "Medical Education & Clinical Experience",
     org: "Arsi University, 5th-year Medicine",
-    period: "[2021] to present",
+    period: "2021 to present",
     note: "Gained through medical education and supervised clinical training. This is not independent practice.",
     points: [
       "Patient history taking, interviewing and communication during clinical rotations.",

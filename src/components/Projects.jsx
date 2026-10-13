@@ -37,42 +37,69 @@ function Cover({ project }) {
 
 function Card({ project }) {
   const hasDemo = Boolean(project.demo);
+  const hasGithub =
+    Boolean(project.github) && !project.github.includes("<repo>");
+
+  // The photo + icons are one link when a demo exists
+  const Media = hasDemo ? "a" : "div";
+  const mediaProps = hasDemo
+    ? {
+        href: project.demo,
+        target: "_blank",
+        rel: "noreferrer",
+        "aria-label": `Open live demo of ${project.name}`,
+      }
+    : {};
+
   return (
     <article className={`card project ${project.featured ? "featured" : ""}`}>
-      <Cover project={project} />
-      <div
-        className="tech-panel"
-        aria-label={`Technologies used in ${project.name}`}
-      >
-        {project.tech.map((t) => (
-          <TechIcon key={t} name={t} />
-        ))}
-      </div>
-      <div className="project-foot">
-        <h3>
-          {project.name}
-          {project.status && <em className="badge">{project.status}</em>}
-        </h3>
-        <div className="project-links">
-          {hasDemo ? (
-            <a
-              className="btn btn-primary sm"
-              href={project.demo}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaArrowUpRightFromSquare /> Live demo
-            </a>
-          ) : (
-            <button
-              className="btn btn-primary sm"
-              disabled
-              title="Live demo link coming soon"
-            >
-              <FaArrowUpRightFromSquare /> Live demo
-            </button>
+      <Media className="project-media" {...mediaProps}>
+        <div className="cover-wrap">
+          <Cover project={project} />
+          {hasDemo && (
+            <>
+              <span className="media-badge" aria-hidden="true">
+                <FaArrowUpRightFromSquare />
+              </span>
+              <span className="media-hover" aria-hidden="true">
+                <FaArrowUpRightFromSquare /> View live demo
+              </span>
+            </>
           )}
         </div>
+        <div
+          className="tech-panel"
+          aria-label={`Technologies used in ${project.name}`}
+        >
+          {project.tech.map((t) => (
+            <TechIcon key={t} name={t} />
+          ))}
+        </div>
+      </Media>
+
+      <div className="project-foot">
+        <h3>{project.name}</h3>
+
+        {project.status && <em className="badge">{project.status}</em>}
+
+        {hasGithub ? (
+          <a
+            className="btn btn-primary sm"
+            href={project.github}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub /> GitHub
+          </a>
+        ) : (
+          <button
+            className="btn btn-primary sm"
+            disabled
+            title="GitHub link coming soon"
+          >
+            <FaGithub /> GitHub
+          </button>
+        )}
       </div>
     </article>
   );

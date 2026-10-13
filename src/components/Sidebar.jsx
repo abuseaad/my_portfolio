@@ -86,9 +86,6 @@ export default function Sidebar({ active, theme, onToggleTheme }) {
           >
             <FaTelegram />
           </a>
-          <a href={`mailto:${profile.email}`} aria-label="Email">
-            <FaEnvelope />
-          </a>
         </div>
         <nav>
           {NAV.map(({ id, label, icon: Icon }) => (

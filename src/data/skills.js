@@ -19,7 +19,7 @@ export const skillGroups = [
     title: "Backend",
     items: ["node", "express", "api", "integration", "backend", "auth"],
   },
-  { title: "Database", items: ["mysql", "sql", "dbdesign", "crud"] },
+  { title: "Database", items: ["mysql", "dbdesign", "crud"] },
   {
     title: "AI & Integration",
     items: ["gemini", "ai", "integration", "search", "rag"],

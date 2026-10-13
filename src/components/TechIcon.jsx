@@ -13,12 +13,12 @@ import {
   SiGit,
   SiGithub,
 } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 import {
   TbApi,
   TbDevices,
   TbDeviceDesktop,
   TbShieldLock,
-  TbPlugConnected,
   TbServerCog,
   TbSitemap,
   TbDatabase,
@@ -29,7 +29,6 @@ import {
   TbBrain,
   TbGitBranch,
   TbUsers,
-  TbCode,
 } from "react-icons/tb";
 
 // key (used in projects.js and skills.js) -> icon, hover label, color
@@ -37,8 +36,8 @@ export const TECH = {
   // brands
   react: { Icon: SiReact, label: "React", color: "#61DAFB" },
   js: { Icon: SiJavascript, label: "JavaScript", color: "#F7DF1E" },
-  html: { Icon: SiHtml5, label: "HTML5", color: "#E34F26" },
-  css: { Icon: SiCss, label: "CSS3", color: "#1572B6" },
+  html: { Icon: SiHtml5, label: "HTML", color: "#E34F26" },
+  css: { Icon: SiCss, label: "CSS", color: "#1572B6" },
   bootstrap: { Icon: SiBootstrap, label: "Bootstrap", color: "#7952B3" },
   jquery: { Icon: SiJquery, label: "jQuery", color: "#0769AD" },
   vite: { Icon: SiVite, label: "Vite", color: "#A78BFA" },
@@ -48,16 +47,13 @@ export const TECH = {
   gemini: { Icon: SiGooglegemini, label: "Google Gemini", color: "#8E75F2" },
   git: { Icon: SiGit, label: "Git", color: "#F05032" },
   github: { Icon: SiGithub, label: "GitHub", color: "#9CA3AF" },
+  vscode: { Icon: VscVscode, label: "VS Code", color: "#007ACC" },
+
   // concepts
   responsive: { Icon: TbDevices, label: "Responsive Design", color: "#2DD4BF" },
   media: { Icon: TbDeviceDesktop, label: "Media Queries", color: "#2DD4BF" },
   dom: { Icon: TbSitemap, label: "DOM", color: "#F59E0B" },
   api: { Icon: TbApi, label: "REST APIs / API integration", color: "#2DD4BF" },
-  integration: {
-    Icon: TbPlugConnected,
-    label: "API Integration",
-    color: "#2DD4BF",
-  },
   backend: {
     Icon: TbServerCog,
     label: "Backend Architecture",
@@ -74,7 +70,6 @@ export const TECH = {
   ai: { Icon: TbBrain, label: "AI-powered Features", color: "#C084FC" },
   search: { Icon: TbSearch, label: "Semantic Search", color: "#C084FC" },
   rag: { Icon: TbFileSearch, label: "RAG Concepts", color: "#C084FC" },
-  vscode: { Icon: TbCode, label: "VS Code", color: "#38BDF8" },
   branching: {
     Icon: TbGitBranch,
     label: "Branching & Pull Requests",
